@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "b3fe597d-a87f-4211-943f-4d9769f07ac0",
+		"name": "projectsocialApps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39317174",
+		"_collection_link": "https://jeri11.postman.co/workspace/jeri-Workspace~e9ce93ba-22bf-4a48-be6b-5e6c5adb3131/collection/39317174-b3fe597d-a87f-4211-943f-4d9769f07ac0?action=share&source=collection_link&creator=39317174"
+	},
+	"item": [
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "getOnepost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplcmkiLCJpZCI6MiwiaWF0IjoxNzQwMTIzNjUwLCJleHAiOjE3NDI3MTU2NTB9.V5rCw9X_1VEWt5MuIxfCm_uee7_bpgEXu7_md_5_VBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accessToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplcnluYW5hNzZAZ21haWwuY29tIiwiaWQiOjEwLCJpYXQiOjE3NDAxMTk1NjgsImV4cCI6MTc0MjcxMTU2OH0.l0CANHXUhUwhCPoyjFby2BWEcborDwxjwl0M7KBkFa0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/posts/byId/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"posts",
+								"byId",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllpost",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "postAdd",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplcmkiLCJpZCI6MiwiaWF0IjoxNzQwMTI2MDI0LCJleHAiOjE3NDI3MTgwMjR9.lyJgYna6oSkfHncubkwrbypDrY7CaWZ-BE7UWpVZMXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accessToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplcmkiLCJpZCI6MiwiaWF0IjoxNzQwMTI2MDI0LCJleHAiOjE3NDI3MTgwMjR9.lyJgYna6oSkfHncubkwrbypDrY7CaWZ-BE7UWpVZMXA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "BNI",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "p",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accessToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplcnluYW5hNzZAZ21haWwuY29tIiwiaWQiOjYsImlhdCI6MTc0MDA3NTMxMSwiZXhwIjoxNzQyNjY3MzExfQ.1NBpvqNTZHqR0tLD1Iba-dB1LyRAymJACO8ToDR83zU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/posts/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"posts",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "getAllCommentFromPost",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "postAddComment",
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "header",
+									"value": "{\r\n    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplcnluYW5hNzZAZ21haWwuY29tIiwiaWQiOjYsImlhdCI6MTc0MDA3NTMxMSwiZXhwIjoxNzQyNjY3MzExfQ.1NBpvqNTZHqR0tLD1Iba-dB1LyRAymJACO8ToDR83zU\r\n}",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "accessToken",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "secret",
+									"value": "jeripatut",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accessToken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplcnluYW5hNzZAZ21haWwuY29tIiwiaWQiOjYsImlhdCI6MTc0MDA3NTMxMSwiZXhwIjoxNzQyNjY3MzExfQ.1NBpvqNTZHqR0tLD1Iba-dB1LyRAymJACO8ToDR83zU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n  \"commentBody\": \"Ini adalah komentar baru\",\r\n  \"postId\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCommentFrompost",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "secret",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"jeri\",\r\n    \"password\":\"120101\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "like",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/likes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"likes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
