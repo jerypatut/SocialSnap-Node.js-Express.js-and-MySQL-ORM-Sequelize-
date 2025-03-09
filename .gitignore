@@ -1,29 +1,26 @@
-# Ignore node_modules folder
+# Node.js (backend & frontend)
 node_modules/
+package-lock.json
 
-# Ignore environment variables file
-.env
+# Build output (React & Express)
+backend/build/
+frontend/build/
+backend/dist/
+frontend/dist/
 
-# Ignore log files
+# Environment variables
+backend/.env
+frontend/.env
+
+# Logs & temp files
+logs/
 *.log
-
-# Ignore build or dist folders
-dist/
-build/
-
-# Ignore IDE-specific files
-.vscode/
-.idea/
-
-# Ignore macOS metadata
-.DS_Store
-
-# Ignore npm debug logs
 npm-debug.log*
 
-# Ignore dependency directories
-jspm_packages/
+# Database files
+backend/*.db
 
-# Ignore temporary files
-*.tmp
-*.temp
+# VSCode settings & system files
+.vscode/
+.DS_Store
+Thumbs.db

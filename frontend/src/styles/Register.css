@@ -1,0 +1,81 @@
+/* Register.css */
+
+/* Container utama untuk halaman registrasi */
+.registrationContainer {
+  max-width: 400px;
+  width: 90%;
+  margin: 100px auto; /* Center form dengan margin atas yang cukup */
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Form container: mengatur layout form secara vertikal */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling label */
+.formContainer label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Styling input field */
+.formContainer input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.formContainer input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Styling pesan error */
+.errorMessage {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Styling tombol submit */
+.formContainer button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.formContainer button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsif: penyesuaian tampilan pada layar kecil */
+@media (max-width: 480px) {
+  .registrationContainer {
+    margin: 50px auto;
+    padding: 1.5rem;
+  }
+  .formContainer label,
+  .formContainer input,
+  .formContainer button {
+    font-size: 0.9rem;
+  }
+}

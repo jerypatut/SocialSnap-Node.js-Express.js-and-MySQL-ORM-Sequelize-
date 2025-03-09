@@ -1,0 +1,65 @@
+/* Container utama untuk login */
+.loginContainer {
+  max-width: 400px;
+  width: 90%;
+  margin: 100px auto; /* Center horizontally with margin-top untuk spasi di atas */
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Styling label */
+.loginContainer label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+/* Styling input fields */
+.loginContainer input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+}
+
+.loginContainer input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Styling tombol login */
+.loginContainer button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginContainer button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsif: untuk layar kecil, perbaiki padding dan margin */
+@media (max-width: 480px) {
+  .loginContainer {
+    padding: 1.5rem;
+    margin: 50px auto;
+  }
+  .loginContainer label,
+  .loginContainer input,
+  .loginContainer button {
+    font-size: 0.9rem;
+  }
+}
